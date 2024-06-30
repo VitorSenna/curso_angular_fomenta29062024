@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-success" routerLink="/criar-pessoa">
+        Adicionar
+      </button>
+    </div>
+    <div class="col-12">
+      <table class="table table-xl">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for(pessoa of pessoas;track pessoa) {
+          <tr>
+            <th scope="row">{{ pessoa.id }}</th>
+            <td>{{ pessoa.nome }}</td>
+            <td>{{ pessoa.idade }}</td>
+            <td>{{ pessoa.email }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

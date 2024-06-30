@@ -14,7 +14,7 @@ export default class PessoasController {
   async list({ response }: HttpContext) {
     const pessoas = await Pessoa.query()
 
-    return response.created(pessoas)
+    return response.ok(pessoas)
   }
 
   async show({ request, response }: HttpContext) {
